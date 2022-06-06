@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <div className="row align-items-center g-lg-5 py-5">
           <div className="col-lg-7 text-center text-lg-start">
             <h1 className="display-4 fw-bold lh-1 mb-3">The Sporechain Foundation</h1>
-            <p className="col-lg-10 fs-4">Sporechain is a, radically decentralized, unified communal gene for the collective preservation of Earth's biodiversity.
+            <p className="col-lg-10 fs-4">Sporechain is a radically decentralized, unified communal gene for the collective preservation of Earth's biodiversity.
 </p>
           </div>
           <div className="col-md-10 mx-auto col-lg-5">
