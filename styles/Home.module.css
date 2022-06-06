@@ -1,5 +1,9 @@
 .container {
   padding: 0 2rem;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
 .main {
