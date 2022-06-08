@@ -12,9 +12,12 @@ const url = 'http://66.42.64.56/register'
 const handler = (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   return axios({
     method: 'post',
-    headers : { 'Content-type': 'application/json', },
+    headers : { 
+      'Content-type': 'application/json', 
+      'Accept' : 'application/json'
+    },
     url: url,
-    data: {'name': req.body.name, 'email': req.body.email }
+    data: req.body
   })
   .then((results) =>{
     res.status(results.status).json(results.data)

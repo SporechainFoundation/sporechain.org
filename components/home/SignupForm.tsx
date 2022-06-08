@@ -1,37 +1,45 @@
-import { Component, useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
-import axios from "axios";
-import { NextApiRequest, NextApiResponse } from "next";
-import { NextRequest } from "next/server";
+import React, { Component, useState } from "react";
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
-class SignupForm extends Component {
+interface SignupFormProps {
+  email: string,
+  name: string
+}
 
-    submit = async () => {
-        fetch('/api/register')
-        .then(data => console.log(data));
+function SignupForm(props: SignupFormProps) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
-    }
+  let handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-    render() {
-        return (
-            <form action="/api/register" method="post" className="p-4 p-md-5 border rounded-3 bg-light">
-              <div>
-                <h2>Join the Mailing List</h2>
-              </div>
-              <div className="form-floating mb-3">
-                <input type="email" className="form-control"  id="email" name="email" placeholder="name@example.com" required/>
-                  <label >Email address</label>
-              </div>
-              <div className="form-floating mb-3">
-                <input type="text" className="form-control" id="name" name="name" />
-                  <label >Name (Optional)</label>
-              </div>
-                <button onClick={this.submit} className="w-100 btn btn-lg btn-primary" type="submit" formTarget="submission">Sign up</button>
+    let res = await fetch('/api/register', {
+      method: "POST",
+      body: JSON.stringify({
+        name: name,
+        email: email
+      })
+    });
 
-                <iframe name="submission" id="submission" style={{display: "none"}}></iframe>
-            </form>
-        )
-    }
+    let resJson = await res.json();
+    console.log(resJson);
+    
+    e.target.reset();
+  }
+
+  return (
+    <Form className="p-4 p-md-5 border rounded-3 bg-light" onSubmit={handleSubmit}>
+      <h2>Join the Mailing List</h2>
+      <Form.Group className="mb-3">
+        <Form.Control required value={props.email} type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+      </Form.Group>
+      <Form.Group className="mb-3">
+        <Form.Control value={props.name} type="text" placeholder="Name (optional)" onChange={(e) => setName(e.target.value)} />
+      </Form.Group>
+      <Button type="submit" className="w-100 btn btn-lg btn-primary">Sign Up</Button>
+    </Form>
+  )
 }
 
 export default SignupForm;
