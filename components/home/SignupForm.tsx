@@ -6,6 +6,9 @@ function SignupForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  const [buttonClassName, setButtonClassName] = useState("w-100 btn btn-lg btn-primary");
+  const [buttonText, setButtonText] = useState("Sign Up");
+
   let handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -20,6 +23,8 @@ function SignupForm() {
     let resJson = await res.json();
     console.log(resJson);
     
+    setButtonClassName("w-100 btn btn-lg btn-success");
+    setButtonText("✔");
     (e.target as HTMLFormElement).reset();
   }
 
@@ -32,7 +37,7 @@ function SignupForm() {
       <Form.Group className="mb-3">
         <Form.Control type="text" placeholder="Name (optional)" onChange={(e) => setName(e.target.value)} />
       </Form.Group>
-      <Button type="submit" className="w-100 btn btn-lg btn-primary">Sign Up</Button>
+      <Button type="submit" id="submitButton" className={buttonClassName}>{buttonText}</Button>
     </Form>
   )
 }
