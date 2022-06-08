@@ -24,7 +24,7 @@ function SignupForm() {
     console.log(resJson);
     
     setButtonClassName("w-100 btn btn-lg btn-success");
-    setButtonText("✔");
+    setButtonText("✓");
     (e.target as HTMLFormElement).reset();
   }
 
