@@ -25,7 +25,7 @@ function SignupForm(props: SignupFormProps) {
     let resJson = await res.json();
     console.log(resJson);
     
-    e.target.reset();
+    (e.target as HTMLFormElement).reset();
   }
 
   return (
