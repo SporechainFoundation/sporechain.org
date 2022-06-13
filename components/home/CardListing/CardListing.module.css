@@ -1,0 +1,23 @@
+.main {
+    color: white;
+    /* display: block; */
+}
+
+.card {
+    background-color: rgba(128, 122, 122, 0);  
+    outline: none;
+}
+
+.flexContainer {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+}
+
+.flexItem {
+    flex: 1 0 21%; 
+}
+
+.icon {
+  font-size: 80px;
+}

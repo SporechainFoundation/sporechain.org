@@ -1,6 +1,7 @@
 import React, { Component, useState } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import styles from './SignupForm.module.css'
 
 function SignupForm() {
   const [name, setName] = useState("");
@@ -22,22 +23,23 @@ function SignupForm() {
 
     let resJson = await res.json();
     console.log(resJson);
-    
+
     setButtonClassName("w-100 btn btn-lg btn-success");
     setButtonText("✓");
     (e.target as HTMLFormElement).reset();
   }
 
   return (
-    <Form className="p-4 p-md-5 border rounded-3 bg-light" onSubmit={handleSubmit}>
-      <h2>Join the Mailing List</h2>
+    <Form className={styles.form} onSubmit={handleSubmit}>
+      <h2 className={styles.text} >Join the Mailing List</h2>
       <Form.Group className="mb-3">
-        <Form.Control required type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+        <Form.Control className={styles.control} required type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Control type="text" placeholder="Name (optional)" onChange={(e) => setName(e.target.value)} />
+        <Form.Control className={styles.control} type="text" placeholder="Name (optional)" onChange={(e) => setName(e.target.value)} />
       </Form.Group>
-      <Button type="submit" id="submitButton" className={buttonClassName}>{buttonText}</Button>
+      {/* <Button type="submit" id="submitButton" className={buttonClassName}>{buttonText}</Button> */}
+      <Button type="submit" id="submitButton" className={styles.button}>{buttonText}</Button>
     </Form>
   )
 }
