@@ -38,7 +38,6 @@
 
 .background {
   background-image: linear-gradient(to bottom left, pink, purple);
-  position: fixed;
   display: flex;
   left: 0;
   right: 0;
