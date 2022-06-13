@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           <div className="row align-items-center g-lg-5 py-5">
             <div className="col-lg-7 text-center text-lg-start">
               <div className={styles.heroText}>
-                <h1 className="display-3 lh-1 mb-3">Preserving The World's Genetics</h1>
+                <h1 className="display-3 lh-1 mb-3">Preserving the World's Genetics</h1>
                 <p className="col-lg-10 fs-3">The Sporechain is a radically decentralized, unified communal gene bank for the collective preservation of Earth's biodiversity.</p>
               </div>
             </div>

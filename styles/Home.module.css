@@ -27,6 +27,8 @@
   height: 400vh;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
+  transform: scale(1.1);
 
   -webkit-filter: blur(100px);
   -moz-filter: blur(100px);
