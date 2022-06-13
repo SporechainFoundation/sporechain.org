@@ -1,6 +1,10 @@
 .navBar {
     border-bottom: white;
     position: absolute;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
 }
 
 .navText {
@@ -11,7 +15,4 @@
 }
 
 .navBarContents {
-    display: flex;
-      align-items: center;
-  justify-content: center;
 }
