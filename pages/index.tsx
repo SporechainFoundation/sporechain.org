@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         </style>
       </Head>
       <div className={styles.background}></div>
-      {/* <NavBar></NavBar> */}
+      <NavBar></NavBar>
       <div className={styles.container}>
 
         <div className="container col-xl-10 col-xxl-8 px-4 py-5">

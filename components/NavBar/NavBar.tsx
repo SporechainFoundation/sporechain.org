@@ -12,7 +12,7 @@ function NavBar() {
                         alt=""
                         src="/logo-wht.png"
                         width="50"
-                        height="50"
+                        height="60"
                         //   className="d-inline-block align-top"
                         className={styles.navText}
                     />{' '}
