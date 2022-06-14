@@ -33,10 +33,10 @@ function SignupForm() {
     <Form className={styles.form} onSubmit={handleSubmit}>
       <h2 className={styles.text} >Join the Mailing List</h2>
       <Form.Group className="mb-3">
-        <Form.Control className={styles.control} required type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+        <Form.Control className={styles.control} required type="email" autocomplete="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
       </Form.Group>
       <Form.Group className="mb-3">
-        <Form.Control className={styles.control} type="text" placeholder="Name (optional)" onChange={(e) => setName(e.target.value)} />
+        <Form.Control className={styles.control} type="text" autocomplete="given-name" placeholder="Name (optional)" onChange={(e) => setName(e.target.value)} />
       </Form.Group>
       {/* <Button type="submit" id="submitButton" className={buttonClassName}>{buttonText}</Button> */}
       <Button type="submit" id="submitButton" className={styles.button}>{buttonText}</Button>
