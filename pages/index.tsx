@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import SignupForm from '../components/home/SignupForm/SignupForm'
 import NavBar from '../components/NavBar/NavBar'
 import CardListing from '../components/home/CardListing/CardListing'
+import GetInvolved from '../components/home/GetInvolved/GetInvolved'
 
 const Home: NextPage = () => {
 
@@ -36,9 +37,12 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        {/* <div className="col-md-5">
-              <CardListing></CardListing>
-              </div> */}
+      </div>
+      <div id="section2" className={styles.container}>
+        <CardListing></CardListing>
+      </div>
+      <div id="section3" className={styles.container}>
+        <GetInvolved></GetInvolved>
       </div>
     </div>
   )
