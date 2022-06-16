@@ -1,21 +1,31 @@
 .main {
     color: white;
     /* display: block; */
+    width: 100vw;
 }
 
-.card {
-    background-color: rgba(128, 122, 122, 0);  
-    outline: none;
+.subHeading {
+  font-size: 60px;
 }
 
 .flexContainer {
   display: flex;
   width: 100vw;
   justify-content: space-evenly;
+  padding-right: 10%;
+  padding-left: 10%;
+  width: 100vw;
+  flex-wrap: wrap;
 }
 
 .flexItem {
-    flex: 1 0 21%; 
+  flex: 33%;
+}
+
+@media (max-width: 1000px) {
+  .flexItem {
+    flex: 100%;
+  }
 }
 
 .icon {
