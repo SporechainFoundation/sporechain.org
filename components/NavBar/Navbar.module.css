@@ -1,7 +1,11 @@
 .navBar {
     border-bottom: white;
-    position: absolute;
+    position: sticky;
+    top: 0;
     padding: 0;
+    z-index: 150;
+    background-color: rgba(128, 122, 122, 0.3);  
+    backdrop-filter: blur(5px);
 }
 
 .navText {
@@ -14,4 +18,5 @@
 .navBarContents {
     justify-content: left;
     padding: 0;
+    margin: 0;
 }
