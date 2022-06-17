@@ -3,3 +3,9 @@
     backdrop-filter: blur(10px);
     margin-bottom: 0;
 }
+
+@media (max-width: 770px) {
+  .main {
+    visibility: hidden;
+  }
+}
