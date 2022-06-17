@@ -5,7 +5,7 @@
     padding: 0;
     z-index: 150;
     background-color: rgba(128, 122, 122, 0.3);  
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 }
 
 .navText {
