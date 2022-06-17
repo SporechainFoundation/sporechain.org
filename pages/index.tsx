@@ -7,6 +7,7 @@ import SignupForm from '../components/home/SignupForm/SignupForm'
 import NavBar from '../components/NavBar/NavBar'
 import CardListing from '../components/home/CardListing/CardListing'
 import GetInvolved from '../components/home/GetInvolved/GetInvolved'
+import Footer from '../components/Footer/Footer'
 
 const Home: NextPage = () => {
 
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
 
       <NavBar></NavBar>
       <div className={styles.background}></div>
-      <div className={styles.container}>
+      <div id="section1" className={styles.container}>
         <div className="container col-xl-10 col-xxl-8 px-4 py-5">
           <div className="row align-items-center g-lg-5 py-5">
             <div className="col-lg-7 text-center text-lg-start">
@@ -49,6 +50,7 @@ const Home: NextPage = () => {
       <div id="section3" className={styles.container}>
         <GetInvolved></GetInvolved>
       </div>
+    <Footer></Footer>
     </div>
   )
 }

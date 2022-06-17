@@ -16,7 +16,7 @@ function NavBar() {
                         //   className="d-inline-block align-top"
                         className={styles.navText}
                     />{' '}
-                    sporechain.org
+                    <a href="#section1">sporechain.org</a>
                 </Navbar.Brand>
             </Container>
         </Navbar>
