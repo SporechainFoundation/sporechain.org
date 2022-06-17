@@ -7,7 +7,7 @@ function CardListing() {
   return (
     <>
       <div className={`${styles.flexContainer} ${styles.main}`}>
-        <div className="row align-items-center g-lg-5 py-5">
+        <div className="row align-items-center g-md-5 ">
           <div className={`${styles.flexItem} text-center`}>
             <img className={styles.icon} src="/icons/book.svg" />
             <h2>Open Source</h2>
