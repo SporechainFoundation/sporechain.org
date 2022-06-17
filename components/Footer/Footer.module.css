@@ -1,0 +1,11 @@
+.main {
+    background-color: rgba(75, 71, 71, 0.3);
+    backdrop-filter: blur(10px);
+    margin-bottom: 0;
+}
+
+@media (max-width: 770px) {
+  .main {
+    visibility: hidden;
+  }
+}
