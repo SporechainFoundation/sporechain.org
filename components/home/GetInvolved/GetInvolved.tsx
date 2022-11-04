@@ -12,6 +12,7 @@ function GetInvolved() {
             <img className={styles.icon} src="/icons/programming-code-svgrepo-com.svg" />
             <h2>Development</h2>
             <h4>Engineer sustainable global solutions</h4>
+            <h4><a href="https://www.github.com/SporechainFoundation" target="_blank"><u>github.com/SporechainFoundation</u></a></h4>
             {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> */}
           </div>
           <div className={`${styles.flexItem} text-center`}>
